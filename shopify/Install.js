@@ -30,16 +30,17 @@ module.exports = (event, context, callback) => {
       '&redirect_uri=' + redirectUri;
 
     response = {
-        statusCode: 301,
-        headers: {
-            "Set-Cookie"  : 'state=' + state + ';',
-            "Cookie"      : 'state=' + state + ';',
-            "Location"    : installUrl
-        },
-        body: null
+      statusCode: 301,
+      headers: {
+        "Set-Cookie": 'state=' + state + ';',
+        "Cookie": 'state=' + state + ';',
+        "Location": installUrl
+      },
+      body: null
     };
 
-  } else {
+  }
+  else {
 
     let response = {
       statusCode: 400,

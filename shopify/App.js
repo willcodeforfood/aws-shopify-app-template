@@ -24,7 +24,8 @@ module.exports = (event, context, callback) => {
 
     // build our params
     const cognitoParams = {
-      IdentityPoolId: 'us-east-1:6f495654-5560-46ef-b09b-a00ea882a542', /* required  us-east-1_wDf8fU7RT */
+      IdentityPoolId: 'us-east-1:699ce928-e531-4a70-b8e0-d26466efa29d',
+      /* required  us-east-1_wDf8fU7RT */
       // IdentityId: 'us-east-1:6f495654-5560-46ef-b09b-a00ea882a542',
       Logins: { /* required */
         'shopify-developer-provider': event.queryStringParameters.shop,
@@ -48,7 +49,8 @@ module.exports = (event, context, callback) => {
       callback(null, response);
     });
 
-  } else {
+  }
+  else {
     response = {
       statusCode: 400,
       body: JSON.stringify({
